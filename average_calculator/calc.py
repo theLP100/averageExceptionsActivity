@@ -31,5 +31,21 @@ def print_average(numbers):
 
 
 def rounded_average(numbers):
+    if numbers == []:
+        raise ValueError("cannot compute average of an empty collection")
+        #question: is it normal to have stacktrace also show up with an error?
+        
     avg = sum(numbers) / len(numbers)
     return floor(avg)
+
+"""
+try: str.lower(user_input)
+
+
+try: 
+        avg = sum(numbers) / len(numbers)
+    except ZeroDivisionError:
+        print("cannot compute average of an empty collection")
+
+#we want to RAISE ValueError
+"""
